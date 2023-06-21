@@ -1,4 +1,4 @@
-# Configurations And DotFiles
+# CON-IN-DO
 
 ## Configurations
 
@@ -49,5 +49,50 @@
 - **Prompt**
   - Starship
 
+### KMonad
+
+- **Presets**
+  - builtin-huawei-extended: A custom KMonad preset for builtin Huawei keyboard
+
+## Installations
+
+- **flatpak** via `flatpak list`
+  - BlackBox
+  - Extension Manager
+  - Gradience
+  - Web
+  - Geary
+  - adw-gtk3
+  - adw-gtk3-dark
+- **dnf** via `dnf repoquery --userinsalled`
+  - 1password
+  - bat
+  - code
+  - exa
+  - fd-find
+  - fish
+  - fzf
+  - gnome-shell-extension-pop-shell
+  - gnome-tweaks
+  - google-chrome-stable
+  - neofetch
+  - neovim
+  - starship
+- **snap** via `snap list`
+  - obsidian
+  - snap-store
+  - snapd
+  - todoist
 
 ## DotFiles
+
+- **BlackBox**
+  - .var/app/com.raggesilver.BlackBox/config/glib-2.0/settings/keyfile
+  - .var/app/com.raggesilver.BlackBox/data/blackbox/schemes/codemos-modern-dark.json
+- **Fish**
+  - .config/fish/config.fish
+  - .config/fish/themes/codemos-modern-dark.fish
+- **Starship**
+  - .config/starship.toml
+- **KMonad**
+  - .config/kmonad/builtin-huawei-extended.kbd
