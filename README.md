@@ -72,6 +72,7 @@
   - neofetch
   - neovim
   - starship
+  - stow
 - **snap** via `snap list`
   - obsidian
   - snap-store
@@ -79,6 +80,8 @@
   - todoist
 
 ## DotFiles
+
+> Clone repository to `~` so the dotFiles are in the directory `~/.dotfiles/`. Runs `stow .` in the `~/.dotfiles/` directory.
 
 - **BlackBox**
   - .var/app/com.raggesilver.BlackBox/config/glib-2.0/settings/keyfile
