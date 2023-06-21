@@ -32,27 +32,21 @@
 - Snap: Package manager for proprietary Linux applications
 - BlackBox: Beautiful terminal to replace the default Gnome Terminal
 - Fish: A replacement for the builtin bash shell
+  - **Plugins**
+    - jorgebucaran/fisher: Fish plugin manager
+    - jorgebucaran/nvm.fish: nvm recreation for Fish
+    - jethrokuan/z: z recreation for Fish
+    - gazorby/fish-exa: exa Fish integration (requires exa)
+    - patrickf1/fzf.fish: fzf Fish integration (requires fzf)
+    - decors/fish-ghq: ghq Fish integration (requires ghq)
+  - **Theme**
+    - Codemos Modern
+  - **Prompt**
+    - Starship
 - Starship: Beautiful shell prompt for fish
 - KMonad: Low level keyboard customizations
-
-### Fish
-
-- **Plugins**
-  - jorgebucaran/fisher: Fish plugin manager
-  - jorgebucaran/nvm.fish: nvm recreation for Fish
-  - jethrokuan/z: z recreation for Fish
-  - gazorby/fish-exa: exa Fish integration (requires exa)
-  - patrickf1/fzf.fish: fzf Fish integration (requires fzf)
-  - decors/fish-ghq: ghq Fish integration (requires ghq)
-- **Theme**
-  - Codemos Modern
-- **Prompt**
-  - Starship
-
-### KMonad
-
-- **Presets**
-  - builtin-huawei-extended: A custom KMonad preset for builtin Huawei keyboard
+  - **Presets**
+    - builtin-huawei-extended: A custom KMonad preset for builtin Huawei keyboard
 
 ## Installations
 
