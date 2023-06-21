@@ -37,7 +37,7 @@
     - jorgebucaran/nvm.fish: nvm recreation for Fish
     - jethrokuan/z: z recreation for Fish
     - gazorby/fish-exa: exa Fish integration (requires exa)
-    - patrickf1/fzf.fish: fzf Fish integration (requires fzf)
+    - patrickf1/fzf.fish: fzf Fish integration (requires fzf, fd-find, bat)
     - decors/fish-ghq: ghq Fish integration (requires ghq)
   - **Theme**
     - Codemos Modern
