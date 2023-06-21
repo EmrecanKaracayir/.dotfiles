@@ -1,0 +1,25 @@
+{
+  "name": "Codemos Modern (Dark)",
+  "comment": "Innovative, modern theme suite for BlackBox",
+  "use-theme-colors": false,
+  "foreground-color": "#CCCCCC",
+  "background-color": "#181818",
+  "palette": [
+    "#333333",
+    "#ef6363",
+    "#45AA41",
+    "#bfaf40",
+    "#4B9ECD",
+    "#ED63BA",
+    "#46A598",
+    "#bbbbbb",
+    "#444444",
+    "#d19797",
+    "#80b27f",
+    "#ada77f",
+    "#729ECF",
+    "#cd95b8",
+    "#83aea8",
+    "#CCCCCC"
+  ]
+}

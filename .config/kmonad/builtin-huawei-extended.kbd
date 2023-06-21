@@ -1,0 +1,45 @@
+(defcfg
+  input  (device-file "/dev/input/by-path/platform-i8042-serio-0-event-kbd")
+  output (uinput-sink "builtin-huawei-extended")
+
+  fallthrough true
+)
+
+(defsrc
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    ret
+  caps a    s    d    f    g    h    j    k    l    ;    '    \
+  lsft lsgt z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl      lmet lalt           spc            ralt rctl
+)
+
+(defalias
+  axl (layer-add extra-layer)
+  rxl (layer-rem extra-layer)
+  atl (layer-add turkish-layer)
+  rtl (layer-rem turkish-layer)
+)
+
+(deflayer qwerty
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    ret
+  @axl a    s    d    f    g    h    j    k    l    ;    '    \
+  lsft lsgt z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl      lmet lalt           spc            caps @atl
+)
+
+(deflayer extra-layer
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    esc  pgup _    _    _    _    up   bspc _    _    _    _
+  @rxl _    home pgdn end  _    _    left down rght _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _
+  _         _    _              _              _    _
+)
+
+(deflayer turkish-layer
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    ı    _    _    ğ    ü    _
+  _    _    _    _    _    _    _    _    _    _    ş    i    _
+  _    _    _    _    _    _    _    _    _    ö    ç    _    _
+  _         _    _              _              _    @rtl
+)

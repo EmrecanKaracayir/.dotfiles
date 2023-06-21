@@ -1,0 +1,24 @@
+[com/raggesilver/BlackBox]
+font='CaskaydiaCove Nerd Font 12'
+cursor-shape=1
+window-show-borders=false
+theme-dark='Codemos Modern (Dark)'
+window-height=1043
+terminal-padding=(16, 16, 16, 16)
+opacity=100
+floating-controls=false
+show-headerbar=true
+show-menu-button=true
+fill-tabs=true
+hide-single-tab=true
+stealth-single-tab=true
+headerbar-drag-area=false
+terminal-cell-width=1.0
+remember-window-size=false
+window-width=954
+use-custom-command=true
+custom-shell-command='fish'
+use-sixel=false
+terminal-cell-height=1.0
+pretty=true
+command-as-login-shell=true
