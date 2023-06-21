@@ -62,6 +62,7 @@
   - 1password
   - bat
   - code
+  - cronie
   - exa
   - fd-find
   - fish
