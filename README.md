@@ -55,10 +55,8 @@
   - Extension Manager
   - Gradience
   - Web
-  - Geary
-  - adw-gtk3
-  - adw-gtk3-dark
 - **dnf** via `dnf repoquery --userinsalled`
+  - adw-gtk3-theme
   - 1password
   - bat
   - code
@@ -67,6 +65,7 @@
   - fd-find
   - fish
   - fzf
+  - Geary
   - gnome-shell-extension-pop-shell
   - gnome-tweaks
   - google-chrome-stable
