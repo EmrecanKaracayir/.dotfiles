@@ -65,7 +65,7 @@
   - fd-find
   - fish
   - fzf
-  - Geary
+  - geary
   - gnome-shell-extension-pop-shell
   - gnome-tweaks
   - google-chrome-stable
