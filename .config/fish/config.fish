@@ -1,10 +1,9 @@
-if status is-interactive
-    # Commands to run in interactive sessions can go here
-end
-
 set fish_greeting ""
 
-sleep 0.2
+nvm install > /dev/null 2>&1
 
-starship init fish | source
+if status is-interactive 
+  sleep 0.25
+  starship init fish | source
+end
 
