@@ -16,8 +16,6 @@
 (defalias
   axl (layer-add extra-layer)
   rxl (layer-rem extra-layer)
-  atl (layer-add turkish-layer)
-  rtl (layer-rem turkish-layer)
 )
 
 (deflayer qwerty
@@ -25,7 +23,7 @@
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    ret
   @axl a    s    d    f    g    h    j    k    l    ;    '    \
   lsft lsgt z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl      lmet lalt           spc            caps @atl
+  lctl      lmet lalt           spc            caps rctl
 )
 
 (deflayer extra-layer
@@ -34,12 +32,4 @@
   @rxl _    home pgdn end  _    _    left down rght _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _
   _         _    _              _              _    _
-)
-
-(deflayer turkish-layer
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _    _    _    _    _    _    ı    _    _    ğ    ü    _
-  _    _    _    _    _    _    _    _    _    _    ş    i    _
-  _    _    _    _    _    _    _    _    _    ö    ç    _    _
-  _         _    _              _              _    @rtl
 )
