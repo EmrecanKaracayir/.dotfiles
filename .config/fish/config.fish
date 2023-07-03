@@ -1,7 +1,6 @@
 set fish_greeting ""
 
 if status is-interactive
-  sleep 0.3
   starship init fish | source
 
   # nvm install #
