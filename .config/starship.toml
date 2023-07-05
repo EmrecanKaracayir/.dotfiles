@@ -152,7 +152,7 @@ format = "[ $symbol]($style)[$output ](fg:alt_red bg:lc_red)"
 
 [time]
 disabled = false
-time_format = "%R" # Hour:Minute Format
+time_format = "%R"               # Hour:Minute Format
 style = "fg:lc_pink bg:def_pink"
 format = "[ 󱑎 $time]($style)"
 

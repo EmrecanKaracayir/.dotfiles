@@ -5,26 +5,26 @@ set -x HC cccccc
 set -x HQ bbbbbb
 
 set -x DEF_BROWN CB8569
-set -x DEF_RED ef6363
+set -x DEF_RED EF6363
 set -x DEF_ORANGE D28342
-set -x DEF_YELLOW bfaf40
+set -x DEF_YELLOW BFAf40
 set -x DEF_GREEN 45AA41
 set -x DEF_MINT 46A598
 set -x DEF_BLUE 4B9ECD
 set -x DEF_PURPLE 9B87EA
 set -x DEF_PINK ED63BA
 
-set -x ALT_RED d19797
-set -x ALT_ORANGE c59e7f
-set -x ALT_YELLOW ada77f
-set -x ALT_GREEN 80b27f
-set -x ALT_MINT 83aea8
-set -x ALT_BLUE 87abc0
-set -x ALT_PURPLE a9a0cb
-set -x ALT_PINK cd95b8
+set -x ALT_RED D19797
+set -x ALT_ORANGE C59E7F
+set -x ALT_YELLOW ADA77F
+set -x ALT_GREEN 80B27F
+set -x ALT_MINT 83AEA8
+set -x ALT_BLUE 87ABC0
+set -x ALT_PURPLE A9A0CB
+set -x ALT_PINK CD95B8
 
-set -x LC_BROWN 492f25
-set -x LC_MINT 303f3d
+set -x LC_BROWN 492F25
+set -x LC_MINT 303F3D
 
 # THEME
 set -U fish_color_normal $HC
