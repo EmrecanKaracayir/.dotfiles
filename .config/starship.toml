@@ -35,8 +35,6 @@ right_format = """
 [─╯](lq)\
 """
 
-command_timeout = 1000
-
 # COLORS
 palette = "CodemosModernDark"
 [palettes.CodemosModernDark]
@@ -143,7 +141,8 @@ format = "[$symbol$ram_pct ]($style)"
 disabled = false
 
 [custom.directory]
-command = """basename (pwd)"""
+command = "basename $PWD"
+shell = ["bash"]
 require_repo = true
 when = "true"
 symbol = " "
