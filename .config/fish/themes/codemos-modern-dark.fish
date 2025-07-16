@@ -39,7 +39,7 @@ set -U fish_color_valid_path $ALT_BLUE --underline
 set -U fish_color_option $ALT_ORANGE
 set -U fish_color_comment $DEF_GREEN
 set -U fish_color_selection $HC --bold --background=$LC
-set -U fish_color_operator $ALT_GREEN
+set -U fish_color_operator $ALT_ORANGE
 set -U fish_color_escape $DEF_RED
 set -U fish_color_autosuggestion $LQ
 set -U fish_color_cwd $ALT_BLUE
