@@ -1,75 +1,75 @@
 "$schema" = "https://starship.rs/config-schema.json"
 
-# THEME 
+# THEME
 format = """
 [╭─](lq)\
 [](def_purple)\
 $os\
+[](fg:def_purple bg:lc_blue)\
 $username\
-[](fg:def_purple bg:lc_purple)\
-$directory\
 [](fg:lc_blue bg:def_mint)\
-$git_branch\
+$directory\
 [](fg:def_mint bg:lc_green)\
-$shell\
+$git_branch\
 [](fg:lc_green bg:def_yellow)\
 $cmd_duration\
 [](def_yellow)\
 $fill\
-[](lc)\
+[](lc_neutral)\
 $status\
-[](fg:def_orange bg:lc)\
+[](fg:def_orange bg:lc_neutral)\
 $memory_usage\
 [](fg:lc_red bg:def_orange)\
 ${custom.directory}\
 [](fg:def_pink bg:lc_red)\
 $time\
 [](def_pink)\
-[─╮](lq)\
+[─╮ ](lq)\
 $line_break\
 [╰─](lq)\
 $character"""
 
 right_format = """
 [❯](lq)\
-[─╯](lq)\
+[─╯ ](lq)\
 """
 
 # COLORS
 palette = "CodemosModernDark"
 [palettes.CodemosModernDark]
-lc = "#333333"
-lq = "#444444"
-hc = "#cccccc"
-hq = "#dddddd"
+lc = "#4C4C4C"
+lq = "#707070"
+hq = "#989898"
+hc = "#CECECE"
 
 def_brown = "#CB8569"
-def_red = "#ef6363"
+def_red = "#EF6363"
 def_orange = "#D28342"
-def_yellow = "#bfaf40"
+def_yellow = "#BFAF40"
 def_green = "#45AA41"
 def_mint = "#46A598"
 def_blue = "#4B9ECD"
 def_purple = "#9B87EA"
 def_pink = "#ED63BA"
 
-alt_red = "#d19797"
-alt_orange = "#c59e7f"
-alt_yellow = "#ada77f"
-alt_green = "#80b27f"
-alt_mint = "#83aea8"
-alt_blue = "#87abc0"
-alt_purple = "#a9a0cb"
-alt_pink = "#cd95b8"
+alt_red = "#D19797"
+alt_orange = "#C59E7F"
+alt_yellow = "#ADA77F"
+alt_green = "#80B27F"
+alt_mint = "#83AEA8"
+alt_blue = "#87ABC0"
+alt_purple = "#A9A0CB"
+alt_pink = "#CD95b8"
 
-lc_red = "#3a2727"
-lc_orange = "#322b24"
+lc_neutral = "#333333"
+lc_red = "#3A2727"
+lc_orange = "#322B24"
 lc_yellow = "#343327"
 lc_green = "#273027"
-lc_mint = "#27302f"
-lc_blue = "#252d31"
-lc_purple = "#2e2a3c"
-lc_pink = "#3a2733"
+lc_mint = "#27302F"
+lc_blue = "#252D31"
+lc_purple = "#2E2A3C"
+lc_pink = "#3A2733"
 
 # LEFT ALIGNED PROMPT
 
@@ -79,81 +79,75 @@ format = "[$symbol]($style)"
 disabled = false
 
 [os.symbols]
-Fedora = "󰣛 "
+Macos = " "
+Ubuntu = " "
+Windows = " "
 
 [username]
-show_always = true
-style_user = "fg:lc_purple bg:def_purple"
-style_root = "fg:lc_purple bg:def_purple"
-format = "[󱕆 󰀄 ]($style)"
-disabled = true
+style_root = "fg:alt_blue bg:lc_blue"
+style_user = "fg:alt_blue bg:lc_blue"
+format = "[  $user ]($style)"
 
 [directory]
-style = "fg:alt_blue bg:lc_blue"
-repo_root_style = "fg:def_blue bg:lc_blue"
+style = "fg:lc_mint bg:def_mint"
+repo_root_style = "fg:lc_mint bg:def_mint"
 read_only = ""
-read_only_style = "fg:def_red bg:lc_blue"
+read_only_style = "fg:lc_red bg:def_mint"
 format = """
 [ $path ]($style)\
 ([]($style)[ $read_only ]($read_only_style))"""
 repo_root_format = """
 [  ]($repo_root_style)\
-[$path]($style)\
-[ ]($style)\
+([$path ]($style))\
 ([]($style)[ $read_only ]($read_only_style))"""
 truncation_length = 3
 truncation_symbol = "…/"
 
 [git_branch]
-symbol = "󰘬"
-style = "fg:lc_mint bg:def_mint"
+symbol = ""
+style = "fg:alt_mint bg:lc_mint"
 format = "[ $symbol $branch ]($style)"
-
-[shell]
-style = "fg:def_green bg:lc_green"
-bash_indicator = "[ ]($style)"
-fish_indicator = "[󰈺 ]($style)"
-zsh_indicator = "[]($style)"
-powershell_indicator = "[󰨊 ]"
-cmd_indicator = "[ ]($style)"
-unknown_indicator = "[]($style)"
-format = "[ $indicator ]($style)"
-disabled = false
 
 [cmd_duration]
 min_time = 25
 style = "fg:lc_yellow bg:def_yellow"
-format = "[ 󱫑 $duration ]($style)"
+format = "[  $duration ]($style)"
+
+# CENTER ALIGNED PROMPT
+
+[fill]
+symbol = "•"
+style = "fg:lc"
 
 # RIGHT ALIGNED PROMPT
 
 [status]
-symbol = "[✘ ](fg:def_red bg:lc)"
-success_symbol = "[✔ ](fg:def_green bg:lc)"
+symbol = "[ ](fg:def_red bg:lc_neutral)"
+success_symbol = "[ ](fg:def_green bg:lc_neutral)"
 format = "$symbol"
 disabled = false
 
 [memory_usage]
-threshold = 75
+threshold = 0
 style = "fg:lc_orange bg:def_orange"
-symbol = " 󰍛 "
+symbol = "  "
 format = "[$symbol$ram_pct ]($style)"
 disabled = false
 
 [custom.directory]
-command = "basename $PWD"
+command = "basename `git rev-parse --show-toplevel`"
 shell = ["bash"]
 require_repo = true
 when = "true"
-symbol = " "
+symbol = ""
 style = "fg:def_red bg:lc_red"
-format = "[ $symbol]($style)[$output ](fg:alt_red bg:lc_red)"
+format = "[ $symbol]($style)[ $output ](fg:alt_red bg:lc_red)"
 
 [time]
 disabled = false
-time_format = "%R"               # Hour:Minute Format
+time_format = "%R"
 style = "fg:lc_pink bg:def_pink"
-format = "[ 󱑎 $time]($style)"
+format = "[  $time]($style)"
 
 # CHARACTER
 [character]
